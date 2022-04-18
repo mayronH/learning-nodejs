@@ -6,6 +6,144 @@
         <title>Postagens </title>
     </head>
     <body>
-        {{body}}
+        <main class="container">
+            {{{body}}}
+        </main>
     </body>
 </html>
+
+<style>
+    .container{
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 80px auto;
+    }
+
+    h1{
+        font-size: 24px;
+        font-weight: 600;
+        color: #222;
+
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    .posts{
+        display: grid;
+        gap: 15px;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 80%;
+    }
+
+    .post{
+        background: #f9f9f9;
+
+        box-shadow: 5px 5px 15px 0px #00000021;
+
+        padding: 15px;
+    }
+
+    .post header{
+        flex: 0.5;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post header h2{
+        margin: 0;
+        margin-bottom: 10px;
+
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .post header small{
+        text-align: end;
+        font-size: 10px;
+        color: #838383;
+    }
+
+    .post main{
+        flex: 1;
+
+        padding: 25px 0;
+    }
+
+    .post footer{
+        flex: 0.5;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .post button{
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+
+        background: #e21c1c;
+
+        border-radius: 0;
+        border: 1px solid #e21c1c;
+    }
+
+    .form form{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        min-width: 480px;
+
+        padding: 25px 15px;
+
+        background: #f9f9f9;
+
+        border: 1px solid #f9f9f9;
+    }
+
+    .form label{
+        font-size: 15px;
+        font-weight: 600;
+        color: #222;
+
+        padding-bottom: 15px;
+    }
+
+    .form input, .form textarea{
+        background: #eeeff0;
+
+        color: #333;
+        font-size: 14px;
+
+        border: 1px solid #ededed;
+
+        padding: 10px 15px;
+
+        margin: 5px 0 15px;
+    }
+
+    .form textarea{
+        min-height: 80px;
+    }
+
+    .form input[type="submit"]{
+        font-size: 18px;
+        color: #fff;
+
+        padding: 15px;
+
+        margin-top: 15px;
+
+        background: #15b80f;
+
+    }
+</style>

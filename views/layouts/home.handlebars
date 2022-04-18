@@ -1,0 +1,21 @@
+<div class="row">
+    <h1>Lista de Posts</h1>
+</div>
+<div class="row posts">
+    {{#each posts}}
+        <div class="post">
+            <header>
+                <h2>{{title}}</h2>
+                <small>{{createdAt}}</small>
+            </header>
+            <main>
+                <p>{{body}}</p>
+            </main>
+            <footer>
+                <a href="/delete/{{id}}">
+                    <button>Deletar</button>
+                </a>
+            </footer>
+        </div>
+    {{/each}}
+</div>
